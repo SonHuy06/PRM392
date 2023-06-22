@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewBindingActivity">
+
+
+    <EditText
+
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:autofillHints="User name"
+
+
+        android:hint="@string/email_or_phone"
+        android:backgroundTint="@color/white"
+        android:inputType="text"
+        android:paddingTop="10dp"
+        android:textColorHint="@color/black"
+        tools:ignore="LabelFor">
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:autofillHints="Password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingTop="10dp"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/white"
+        tools:ignore="LabelFor">
+
+    </EditText>
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_margin="10dp"
+
+        android:text="@string/login">
+
+    </Button>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_login"
+        android:id="@+id/seekBarBindingView"
+
+        android:min="0"
+        android:max="100"
+        >
+
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSeekBarBindingView"
+        android:layout_below="@id/seekBarBindingView"
+        android:layout_alignStart="@id/seekBarBindingView">
+
+    </TextView>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxViewBindingJava"
+        android:checked="false"
+        android:layout_below="@id/txtSeekBarBindingView"
+        android:paddingHorizontal="5dp"
+        android:text="@string/java"
+        >
+
+    </CheckBox>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxViewBindingPython"
+        android:checked="false"
+        android:layout_below="@id/checkBoxViewBindingJava"
+        android:text="@string/python"
+        android:paddingHorizontal="5dp"
+        >
+
+    </CheckBox>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxViewBindingAndroid"
+        android:checked="false"
+        android:layout_below="@id/checkBoxViewBindingPython"
+        android:text="@string/android_studio"
+        android:paddingHorizontal="5dp"
+        >
+
+    </CheckBox>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupViewBinding"
+        android:layout_below="@id/checkBoxViewBindingAndroid"
+        android:layout_marginTop="20dp">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRadioTennisViewBinding"
+            android:text="@string/tennis"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRadioSwimmingViewBinding"
+            android:text="@string/swimming"/>
+    </RadioGroup>
+
+    <Spinner
+        android:layout_below="@id/radioGroupViewBinding"
+        android:id="@+id/planets_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"/>
+
+    <ToggleButton
+
+        android:layout_below="@id/planets_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ToggleState"/>
+
+    <Button
+        android:id="@+id/comeback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/planets_spinner"
+        android:text="@string/click"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
+        android:layout_below="@id/comeback"
+        android:id="@+id/logOut"/>
+
+
+</RelativeLayout>
